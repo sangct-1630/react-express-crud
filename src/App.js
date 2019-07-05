@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Create from './components/business/CreateBusiness';
 import Edit from './components/business/EditBusiness';
 import Index from './components/business/IndexBusiness';
+import ReactRedux from './components/todo/App'
 
 class App extends Component {
   render() {
@@ -26,6 +27,9 @@ class App extends Component {
                 <li className="nav-item">
                   <Link to={'/index'} className="nav-link">Index</Link>
                 </li>
+                <li className="nav-item">
+                  <Link to={'/todo-app-redux-react'} className="nav-link">React-Redux</Link>
+                </li>
               </ul>
             </div>
           </nav> <br/>
@@ -34,6 +38,7 @@ class App extends Component {
             <Route exact path='/create' component={ Create } />
             <Route path='/edit/:id' component={ Edit } />
             <Route path='/index' component={ Index } />
+            <Route path='/todo-app-redux-react' component={ ReactRedux } />
           </Switch>
         </div>
       </Router>
