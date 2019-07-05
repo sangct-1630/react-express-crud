@@ -37,11 +37,10 @@ export default class Index extends Component {
       .catch(err => console.log(err))
   };
 
-  tabRow() {
-    return this.state.business.map((object, i) =>
+  tabRow = () =>
+    this.state.business.map((object, i) =>
        <TableRow obj={object} key={i} onDelete={this.handleDelete}/>
     );
-  }
 
   render() {
     return (
